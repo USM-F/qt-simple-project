@@ -27,17 +27,17 @@ void FacultyWindow::on_pushButtonProfessor_clicked()
     dlgP->show();
     if (dlgP->exec())
     {
-        Professor *Smart=new Professor( dlgP->GetFirstName(),
-                                        dlgP->GetMiddleName(),
-                                        dlgP->GetLastName(),
-                                        dlgP->GetAge(),
-                                        dlgP->GetPublications(),
-                                        dlgP->GetPosition()
-                                       );
-        facultylist.append(Smart);
+        Professor *professor=new Professor( dlgP->GetFirstName(),
+                                            dlgP->GetMiddleName(),
+                                            dlgP->GetLastName(),
+                                            dlgP->GetAge(),
+                                            dlgP->GetPublications(),
+                                            dlgP->GetPosition()
+                                          );
+        facultylist.append(professor);
 
         ui->listWidget->clear();
-        ui->listWidget->addItem("Added: \n"+Smart->ShowData());
+        ui->listWidget->addItem("Added: \n"+professor->ShowData());
     }
 }
 
@@ -49,15 +49,15 @@ void FacultyWindow::on_pushButtonStudent_clicked()
     dlgS->show();
     if(dlgS->exec())
     {
-        Student *Stupid=new Student( dlgS->GetFirstName(),
-                                     dlgS->GetMiddleName(),
-                                     dlgS->GetLastName(),
-                                     dlgS->GetAverageGrade()
+        Student *student=new Student( dlgS->GetFirstName(),
+                                      dlgS->GetMiddleName(),
+                                      dlgS->GetLastName(),
+                                      dlgS->GetAverageGrade()
                                     );
-        facultylist.append(Stupid);
+        facultylist.append(student);
 
         ui->listWidget->clear();
-        ui->listWidget->addItem("Added: \n"+Stupid->ShowData());
+        ui->listWidget->addItem("Added: \n"+student->ShowData());
     }
 }
 

@@ -24,7 +24,7 @@ class Professor: public Person
 public:
     Professor(QString firstname, QString middlename, QString lastname,
               unsigned int age, unsigned int publications, QString position);
-    virtual QString ShowData() override;
+    QString ShowData() override;
 protected:
     unsigned int publications;
     unsigned int age;
@@ -36,7 +36,7 @@ class Student: public Person
 public:
     Student(QString firstname, QString middlename, QString lastname,
             double average_grade);
-    virtual QString ShowData() override;
+    QString ShowData() override;
 protected:
     double average_grade;
 };

@@ -1,7 +1,5 @@
 #include "person.h"
 
-//QStringList positions = {"Thunder", "Lightning", "Rain"};
-
 /*-person-*/
 Person::Person(QString firstname, QString middlename, QString lastname)
 {
